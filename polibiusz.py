@@ -55,10 +55,10 @@ text2 = format_text(text2)
 if __name__ == "__main__":
     key1 = random_key()
     crypto_text1 = encrypt(text, key1)
-    with open("crypto_text1.txt", "w") as f:
+    with open("data\crypto_text1.txt", "w") as f:
         f.write(crypto_text1)
 
     key2 = random_key()
     crypto_text2 = encrypt(text2, key2)
-    with open("crypto_text2.txt", "w") as f:
+    with open("data\crypto_text2.txt", "w") as f:
         f.write(crypto_text2)

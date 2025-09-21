@@ -13,7 +13,7 @@ from time import time as tm
 import ngram
 from polibiusz import decrypt, random_key
 
-scorer = ngram.ngram("english_quadgrams_J2I.txt")
+scorer = ngram.ngram("data\english_quadgrams_J2I.txt")
 
 
 def change_of_key(key0):
@@ -50,14 +50,14 @@ def shotgun_attack(crypto_text, duration=5, key_time=0.7):
 
 
 if __name__ == "__main__":
-    with open("crypto_text1.txt", "r") as f:
+    with open("data\crypto_text1.txt", "r") as f:
         crypto_text = f.read()
 
     print("Attack 1: ")
     attack1 = shotgun_attack(crypto_text, 45, 2)
     print(attack1)
 
-    with open("crypto_text2.txt", "r") as f:
+    with open("data\crypto_text2.txt", "r") as f:
         crypto_text2 = f.read()
 
     print("Attack 2: ")
